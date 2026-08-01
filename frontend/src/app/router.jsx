@@ -30,8 +30,9 @@ import StudentResults from "../pages/student/StudentResults";
 import StudentNotices from "../pages/student/StudentNotices";
 import TeacherClassManagement from "../pages/TeacherClassManagement";
 
-export const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
+export const router = createBrowserRouter(
+  [
+    { path: "/", element: <Home /> },
   { path: "/login", element: <LoginSelect /> },
   { path: "/login/admin", element: <AdminLogin /> },
 
@@ -177,4 +178,6 @@ export const router = createBrowserRouter([
     path: "/teacher/tests/:testId",
     element: <TeacherProtectedRoute><TeacherTestDetails /></TeacherProtectedRoute>
   },
-]);
+  ],
+  { basename: "/MentorsHub-main" }
+);
